@@ -9,6 +9,14 @@ import com.yhkim.kt_fragment_20191215.fragments.ThirdFragment
 
 class MainViewPagerAdapter(fm:FragmentManager) : FragmentPagerAdapter(fm) {
 
+    override fun getPageTitle(position: Int): CharSequence? {
+        return when(position) {
+            0 -> {"사용자 정보"}
+            1 -> {"두번째 화면"}
+            else -> {"마지막"}
+        }
+    }
+
     override fun getItem(position: Int): Fragment {
 //        if(position == 0) {
 //            return FirstFragment()
