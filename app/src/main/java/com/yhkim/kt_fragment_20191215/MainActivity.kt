@@ -24,6 +24,9 @@ class MainActivity : BaseActivity() {
             firstLayout.visibility = View.GONE
             secondLayout.visibility = View.VISIBLE
         }
+
+        //android change fragment 검색요망 (방법이 위와 틀림) replace commit()...정석방법
+        //위방법이 정석보다 동작이 빠름(편법 코드, 실무 적용)
     }
 
     override fun setValues() {
