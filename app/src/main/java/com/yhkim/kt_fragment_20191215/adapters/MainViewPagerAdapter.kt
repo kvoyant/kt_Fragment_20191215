@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.yhkim.kt_fragment_20191215.fragments.FirstFragment
 import com.yhkim.kt_fragment_20191215.fragments.SecondFragment
+import com.yhkim.kt_fragment_20191215.fragments.ThirdFragment
 
 class MainViewPagerAdapter(fm:FragmentManager) : FragmentPagerAdapter(fm) {
 
@@ -19,12 +20,13 @@ class MainViewPagerAdapter(fm:FragmentManager) : FragmentPagerAdapter(fm) {
         //kotlin syntax change ~
         return when(position) {
             0 -> { FirstFragment() }
-            else -> { SecondFragment() }
+            1 -> { SecondFragment() }
+            else -> { ThirdFragment() }
         }
     }
 
     override fun getCount(): Int {
-        return 2
+        return 3
     }
 
 }
