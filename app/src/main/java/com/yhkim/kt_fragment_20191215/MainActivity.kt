@@ -1,6 +1,5 @@
 package com.yhkim.kt_fragment_20191215
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
