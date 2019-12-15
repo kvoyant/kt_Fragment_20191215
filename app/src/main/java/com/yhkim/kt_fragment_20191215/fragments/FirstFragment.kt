@@ -5,12 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import com.yhkim.kt_fragment_20191215.R
 import kotlinx.android.synthetic.main.fragment_first.*
 
-class FirstFragment : Fragment(){
-
+class FirstFragment : BaseFragment(){
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,11 +20,18 @@ class FirstFragment : Fragment(){
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
-        okBtn.setOnClickListener {
-            //내가 누구? mContext => activity
-            Toast.makeText(activity, "${nameEdt.text.toString()}", Toast.LENGTH_SHORT).show()
-        }
-
+        setupEvents()
+        setupValues()
     }
+
+    override fun setupEvents() {
+        okBtn.setOnClickListener {
+            //내가 누구? mContext => activity => activity(BaseFragment 수정후 )
+            Toast.makeText(mContext, "${nameEdt.text.toString()}", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    override fun setupValues() {
+    }
+
 }
